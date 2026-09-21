@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NDMC Birth / Still Birth / Death Certificate Authentication Page</title>
   <style>
     * {
@@ -14,101 +15,141 @@
       background-color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
       color: #333333;
-      padding: 8px 10px;
+      padding: 6px;
     }
 
     .wrapper {
-      border: 3px solid #0a335c;
+      border: 3.5px solid #2d2a54;
       width: 100%;
+      max-width: 1250px;
       margin: 0 auto;
       background: #ffffff;
     }
 
-    /* Top Logo Header */
+    /* Header Section */
     .header-bar {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 8px 24px 6px 24px;
-      border-bottom: 2px solid #0a335c;
+      background-color: #ededed;
+      padding: 10px 14px 8px 14px;
+      border-bottom: 2px solid #2d2a54;
     }
 
     .header-bar .logo-left img {
-      height: 100px;
+      height: 72px;
       width: auto;
       display: block;
     }
 
     .header-bar .logo-center img {
-      height: 96px;
+      height: 68px;
       width: auto;
       display: block;
       margin: 0 auto;
     }
 
     .header-bar .logo-right img {
-      height: 85px;
+      height: 60px;
       width: auto;
       display: block;
     }
 
     /* Page Heading */
     .heading-title {
-      padding: 20px 24px 12px 24px;
-      font-size: 16.5px;
+      padding: 16px 14px 12px 14px;
+      font-size: 14.5px;
       font-weight: bold;
       color: #000000;
+      line-height: 1.4;
     }
 
-    /* Details Grid Table */
-    .table-container {
-      padding: 0 16px 22px 16px;
+    /* Content Area */
+    .content-container {
+      padding: 0 14px 18px 14px;
     }
 
-    .data-table {
-      width: 100%;
-      border-collapse: collapse;
+    .field-group {
+      margin-bottom: 12px;
     }
 
-    .data-table td {
-      padding: 7px 10px;
-      font-size: 14.5px;
-      line-height: 1.45;
-      vertical-align: top;
-    }
-
-    /* Natural Clean Bold */
     .lbl {
       font-weight: bold;
       color: #000000;
-      white-space: nowrap;
+      font-size: 14px;
+      margin-bottom: 3px;
+      line-height: 1.3;
     }
-
-    .c-lbl1 { width: 20%; }
-    .c-val1 { width: 30%; }
-    .c-lbl2 { width: 22%; }
-    .c-val2 { width: 28%; }
 
     .val {
       color: #333333;
+      font-size: 14px;
+      line-height: 1.35;
+      word-break: break-word;
     }
 
-    /* Green Bottom Footer */
+    /* Desktop View: Auto 2-column grid */
+    @media (min-width: 769px) {
+      body {
+        padding: 8px 12px;
+      }
+
+      .header-bar {
+        background-color: #ffffff;
+        padding: 6px 20px 4px 20px;
+      }
+
+      .header-bar .logo-left img { height: 90px; }
+      .header-bar .logo-center img { height: 85px; }
+      .header-bar .logo-right img { height: 75px; }
+
+      .heading-title {
+        font-size: 14px;
+        padding: 16px 22px 10px 22px;
+      }
+
+      .content-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 24px;
+        padding: 0 22px 20px 22px;
+      }
+
+      .field-row {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 9px;
+      }
+
+      .field-row .lbl {
+        width: 44%;
+        flex-shrink: 0;
+        margin-bottom: 0;
+        white-space: nowrap;
+      }
+
+      .field-row .val {
+        width: 56%;
+      }
+    }
+
+    /* Footer */
     .footer-strip {
       background-color: #c9eec9;
       color: #0b5927;
       text-align: center;
-      font-size: 13px;
+      font-size: 12px;
       font-weight: bold;
-      padding: 8px 10px;
-      border-top: 1px solid #b2deb2;
+      line-height: 1.4;
+      padding: 6px 8px;
+      border-top: 1px solid #a2d6a2;
     }
   </style>
 </head>
 <body>
 
   <div class="wrapper">
-    <!-- Header Logos -->
+    <!-- Header with Logos -->
     <div class="header-bar">
       <div class="logo-left">
         <img src="Capture.JPG" alt="NDMC Logo">
@@ -126,75 +167,121 @@
       NDMC Birth / Still Birth / Death Certificate Authentication Page
     </div>
 
-    <!-- Certificate Data Table -->
-    <div class="table-container">
-      <table class="data-table">
-        <tr>
-          <td class="lbl c-lbl1">Organization Name:-</td>
-          <td class="val c-val1">New Delhi Municipal Council</td>
-          <td class="lbl c-lbl2">Department Name:-</td>
-          <td class="val c-val2">Health Department</td>
-        </tr>
-        <tr>
-          <td class="lbl">Application Number:-</td>
-          <td class="val">SJHB0008650/2022</td>
-          <td class="lbl">Name:-</td>
-          <td class="val">LAVI PAL AHIRWAR</td>
-        </tr>
-        <tr>
-          <td class="lbl">Date of Event:-</td>
-          <td class="val">30-04-2022 23:35</td>
-          <td class="lbl">Gender:-</td>
-          <td class="val">Female</td>
-        </tr>
-        <tr>
-          <td class="lbl">Place Of Event:-</td>
-          <td class="val">SAFDARJUNG HOSPITAL NEW DELHI</td>
-          <td class="lbl">Activity Type:-</td>
-          <td class="val">Birth</td>
-        </tr>
-        <tr>
-          <td class="lbl">Registration Number:-</td>
-          <td class="val">8650</td>
-          <td class="lbl">Registration Date:-</td>
-          <td class="val">10-05-2022</td>
-        </tr>
-        <tr>
-          <td class="lbl">Mother Name:-</td>
-          <td class="val">LAXMI PAL</td>
-          <td class="lbl">Mother UID No.:-</td>
-          <td class="val">0</td>
-        </tr>
-        <tr>
-          <td class="lbl">Father Name:-</td>
-          <td class="val">JEETU AHIRWAR</td>
-          <td class="lbl">Father UID No.:-</td>
-          <td class="val">0</td>
-        </tr>
-        <tr>
-          <td class="lbl">Husband/Wife Name:-</td>
-          <td class="val"></td>
-          <td class="lbl">Husband/Wife UID No.:-</td>
-          <td class="val"></td>
-        </tr>
-        <tr>
-          <td class="lbl">Event Address of Birth/Death:-</td>
-          <td class="val">H NO WARD NO 7 PRITHVI PUR<br>TIKAMGARH MADHYA PRADESH</td>
-          <td class="lbl">Permanent Address of Birth/Death:-</td>
-          <td class="val">H NO WARD NO 7 PRITHVI PUR<br>TIKAMGARH MADHYA PRADESH</td>
-        </tr>
-        <tr>
-          <td class="lbl">Issue Date:-</td>
-          <td class="val">12-03-2023 14:11</td>
-          <td class="lbl">Authentication Status:</td>
-          <td class="val">APPROVED</td>
-        </tr>
-      </table>
+    <!-- Mobile Stack / Desktop 2-Column Responsive Body -->
+    <div class="content-container">
+      
+      <!-- Left Column Group on Desktop / Sequential on Mobile -->
+      <div class="col-group">
+        <div class="field-row field-group">
+          <div class="lbl">Organization Name:-</div>
+          <div class="val">New Delhi Municipal Council</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Department Name:-</div>
+          <div class="val">Health Department</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Application Number:-</div>
+          <div class="val">SJHB0008650/2022</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Name:-</div>
+          <div class="val">LAVI PAL AHIRWAR</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Date of Event:-</div>
+          <div class="val">30-04-2022 23:35</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Gender:-</div>
+          <div class="val">Female</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Place Of Event:-</div>
+          <div class="val">SAFDARJUNG HOSPITAL NEW DELHI</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Activity Type:-</div>
+          <div class="val">Birth</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Registration Number:-</div>
+          <div class="val">8650</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Registration Date:-</div>
+          <div class="val">10-05-2022</div>
+        </div>
+      </div>
+
+      <!-- Right Column Group on Desktop / Continues Below on Mobile -->
+      <div class="col-group">
+        <div class="field-row field-group">
+          <div class="lbl">Mother Name:-</div>
+          <div class="val">LAXMI PAL</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Mother UID No.:-</div>
+          <div class="val">0</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Father Name:-</div>
+          <div class="val">JEETU AHIRWAR</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Father UID No.:-</div>
+          <div class="val">0</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Husband/Wife Name:-</div>
+          <div class="val"></div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Husband/Wife UID No.:-</div>
+          <div class="val"></div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Event Address of Birth/Death:-</div>
+          <div class="val">H NO WARD NO 7 PRITHVI PUR TIKAMGARH MADHYA PRADESH</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Permanent Address of Birth/Death:-</div>
+          <div class="val">H NO WARD NO 7 PRITHVI PUR TIKAMGARH MADHYA PRADESH</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Issue Date:-</div>
+          <div class="val">12-03-2023 14:11</div>
+        </div>
+
+        <div class="field-row field-group">
+          <div class="lbl">Authentication Status:</div>
+          <div class="val">APPROVED</div>
+        </div>
+      </div>
+
     </div>
 
-    <!-- Bottom Footer -->
+    <!-- Footer Banner -->
     <div class="footer-strip">
-      This is official webpage of NDMC. 2016 &copy; || All Rights Reserved || Best View in Google Chrome and IE version 9 and above.
+      This is official webpage of NDMC. 2016 &copy; || All Rights Reserved<br>
+      || Best View in Google Chrome and IE version 9 and above.
     </div>
   </div>
 
